@@ -1,5 +1,6 @@
 package lab1;
 
+import java.util.zip.DataFormatException;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,23 +17,32 @@ import javax.swing.JOptionPane;
 public class Challenge1_DMB {
 
     private static final int LAST_NAME_IDX = 1;
+    private static String VALIDATE_MSG = " is not valid - Field cannot contain "
+            + "digits or symbols, and cannot be empty or null.  \nPlease enter "
+            + "your full name";
 
     public static void main(String[] args) {
         Challenge1_DMB app = new Challenge1_DMB();
         try {
             String fullName = JOptionPane.showInputDialog("Enter full name:");
+            if (!validateFullName(fullName)) {
+                throw new ArrayIndexOutOfBoundsException("Full Name" + VALIDATE_MSG);
+            }
             String lastName = app.extractLastName(fullName);
             String msg = "Your last name is: " + lastName;
             JOptionPane.showMessageDialog(null, msg);
-        } catch (IndexOutOfBoundsException oob) {
-            JOptionPane.showMessageDialog(null, "Name is invalid - Field must"
-                    + " contain a space.  It cannot be empty, null, or contain "
-                    + "digits or symbols");
+        } catch (ArrayIndexOutOfBoundsException oob) {
+            JOptionPane.showMessageDialog(null, oob.getMessage());
         }
     }
 
     public String extractLastName(String fullName) {
         String[] nameParts = fullName.split(" ");
         return nameParts[LAST_NAME_IDX];
+    }
+
+    public static boolean validateFullName(String fullName) {
+        // validate that fullName is populated with characters
+        return fullName.matches("[A-Z] [a-zA-Z]*");
     }
 }
