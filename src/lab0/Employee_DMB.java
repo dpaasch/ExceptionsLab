@@ -30,13 +30,13 @@ public class Employee_DMB {
     private String ssn;
     private Date hireDate;
     private int daysVacation;
-    public String VAC_MSG = "# Vaction Days is not valid - Days must be "
+    private String VAC_MSG = "# Vaction Days is not valid - Days must be "
             + "between 0 - 28";
-    public String HIRE_MSG = "Hire date is not valid - Please enter in the "
+    private String HIRE_MSG = "Hire date is not valid - Please enter in the "
             + "following format mm/dd/yyyy";
-    public String SSN_MSG = "SSN is not valid - Please enter in the following "
+    private String SSN_MSG = "SSN is not valid - Please enter in the following "
             + "format 123-45-6789";    
-    public String MSG = " is not valid - Field cannot be empty, null, or "
+    private String MSG = " is not valid - Field cannot be empty, null, or "
             + "contain digits";
 
     public Employee_DMB() {
