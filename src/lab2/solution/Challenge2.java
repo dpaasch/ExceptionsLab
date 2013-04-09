@@ -1,4 +1,6 @@
-package lab2;
+package lab2.solution;
+
+import lab2.InputOutputGui;
 
 /**
  * This challenge is similar to the first one, except that the architecture 
@@ -10,7 +12,7 @@ package lab2;
  * @author  Jim Lombardo, jlombardo@wctc.edu
  * @version 1.00
  */
-public class Challenge2_DMB {
+public class Challenge2 {
 
     public static void main(String[] args) {
         

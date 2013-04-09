@@ -1,6 +1,7 @@
-package lab2;
+package lab2.solution;
 
 import javax.swing.JOptionPane;
+import lab2.NameService;
 
 /**
  * This class is responsible for all input and output in the program.
@@ -8,10 +9,10 @@ import javax.swing.JOptionPane;
  * @author  Jim Lombardo, jlombardo@wctc.edu
  * @version 1.00
  */
-public class InputOutputGui_DMB {
+public class InputOutputGui {
     private NameService nameService;
 
-    public InputOutputGui_DMB() {
+    public InputOutputGui() {
         nameService = new NameService();
     }
 
