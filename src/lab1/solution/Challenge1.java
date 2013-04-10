@@ -25,9 +25,6 @@ public class Challenge1 {
         Challenge1 app = new Challenge1();
         try {
             String fullName = JOptionPane.showInputDialog("Enter full name:");
-            if (!validateFullName(fullName)) {
-                throw new ArrayIndexOutOfBoundsException("Full Name" + VALIDATE_MSG);
-            }
             String lastName = app.extractLastName(fullName);
             String msg = "Your last name is: " + lastName;
             JOptionPane.showMessageDialog(null, msg);
@@ -36,7 +33,11 @@ public class Challenge1 {
         }
     }
 
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName) throws ArrayIndexOutOfBoundsException {
+        // validate the full name entered and throw the Array exception
+        if (!validateFullName(fullName)) {
+            throw new ArrayIndexOutOfBoundsException("Full Name" + VALIDATE_MSG);
+        }
         String[] nameParts = fullName.split(" ");
         return nameParts[LAST_NAME_IDX];
     }
