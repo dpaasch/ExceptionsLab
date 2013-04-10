@@ -11,7 +11,8 @@ package lab3;
  */
 public class Challenge3_solution {
 
-    public static void main(String[] args) throws InvalidNameException {
+    public static void main(String[] args) throws InvalidNameException, 
+            ArrayIndexOutOfBoundsException {
 
         new InputOutputGui_solution().startConversation();
     }

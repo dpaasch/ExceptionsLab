@@ -16,18 +16,17 @@ public class InputOutputGui_solution {
         nameService = new NameService_solution();
     }
 
-    public void startConversation() throws InvalidNameException {
-        {
-            try {
-                String fullName = JOptionPane.showInputDialog("Enter full name:");
-                String lastName = nameService.extractLastName(fullName);
-                String msg = "Your last name is: " + lastName;
-                JOptionPane.showMessageDialog(null, msg);
-            } catch (InvalidNameException ine) {
-                JOptionPane.showMessageDialog(null, ine.getMessage());
-            } catch (ArrayIndexOutOfBoundsException oob) {
-                JOptionPane.showMessageDialog(null, oob.getMessage());
-            }
+    public void startConversation() throws InvalidNameException, 
+            ArrayIndexOutOfBoundsException {
+        try {
+            String fullName = JOptionPane.showInputDialog("Enter full name:");
+            String lastName = nameService.extractLastName(fullName);
+            String msg = "Your last name is: " + lastName;
+            JOptionPane.showMessageDialog(null, msg);
+        } catch (InvalidNameException ine) {
+            JOptionPane.showMessageDialog(null, ine.getMessage());
+        } catch (ArrayIndexOutOfBoundsException oob) {
+            JOptionPane.showMessageDialog(null, oob.getMessage());
         }
     }
 }
