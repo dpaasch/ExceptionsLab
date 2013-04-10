@@ -1,6 +1,5 @@
-package lab1.solution;
+package lab1;
 
-import java.util.zip.DataFormatException;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author Dawn Bykowski, dpaasch@my.wctc.edu
  * @version 1.00
  */
-public class Challenge1 {
+public class Challenge1_solution {
 
     private static final int LAST_NAME_IDX = 1;
     private static String VALIDATE_MSG = " is not valid - Field cannot contain "
@@ -22,7 +21,7 @@ public class Challenge1 {
             + "your full name";
 
     public static void main(String[] args) {
-        Challenge1 app = new Challenge1();
+        Challenge1_solution app = new Challenge1_solution();
         try {
             String fullName = JOptionPane.showInputDialog("Enter full name:");
             String lastName = app.extractLastName(fullName);

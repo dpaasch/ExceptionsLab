@@ -1,4 +1,4 @@
-package lab0.solution;
+package lab0;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -21,7 +21,7 @@ import java.util.zip.DataFormatException;
  * @author Dawn Bykowski, dpaasch@my.wctc.edu
  * @version 1.00
  */
-public class Employee {
+public class Employee_solution {
 
     public static final int MAX_VACATION_DAYS = 28;
     public static final int MIN_VACATION_DAYS = 0;
@@ -39,7 +39,7 @@ public class Employee {
     private String MSG = " is not valid - Field cannot be empty, null, or "
             + "contain digits";
 
-    public Employee() {
+    public Employee_solution() {
         firstName = "Unknown";
         lastName = "Unknown";
         ssn = "Unknown";
@@ -47,7 +47,7 @@ public class Employee {
         daysVacation = 0;
     }
 
-    public Employee(String firstName, String lastName, String ssn, Date hireDate, int daysVacation) {
+    public Employee_solution(String firstName, String lastName, String ssn, Date hireDate, int daysVacation) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.ssn = ssn;
@@ -183,7 +183,7 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Employee e = new Employee();
+        Employee_solution e = new Employee_solution();
         Date d = new Date(0);
         e.setDaysVacation(30);
         e.setFirstName(" ");
